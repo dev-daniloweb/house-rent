@@ -1,0 +1,25 @@
+{
+  "name": "house-rent",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/dev-daniloweb/house-rent.git",
+  "author": "danilo <dev.daniloweb@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-standard": "^13.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "nodemon": "^1.19.1"
+  }
+}
