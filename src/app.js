@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const express = require('express')
 const nunjucks = require('nunjucks')
 const path = require('path')
@@ -6,6 +8,8 @@ class App {
   constructor () {
     this.express = express()
     this.isDev = process.env.NODE_ENV !== 'Development'
+
+    console.log(process.env.NODE_ENV)
 
     this.middlewares()
     this.views()
