@@ -1,21 +1,21 @@
 {% extends "_layouts/auth.njk" %}
 
 {% block body %}
-  <form action="/signup" method="post" class="form-container">
+  <form action="/signup" method="post" class="form-container" enctype="multipart/form-data">
     <div class="logo">
       <img src="https://img.icons8.com/flat_round/64/000000/home.png">
       <h1>House Rent</h1>
     </div>
     <div class="form-group">
       <label for="avatar">
-        <img src="https://img.icons8.com/cotton/64/000000/gender-neutral-user--v1.png">
+        <img src="https://img.icons8.com/cotton/64/000000/image-file-add--v2.png">
       </label>
 
       <input type="file" name="avatar" id="avatar">
 
-      <input type="text" placeholder="Nome" >
-      <input type="email" placeholder="Email" >
-      <input type="password" placeholder="Senha" >
+      <input type="text" name="name" placeholder="Nome" >
+      <input type="email" name="email" placeholder="Email" >
+      <input type="password" name="password" placeholder="Senha" >
 
       <button type="submit">Cadastrar</button>
     </div>
