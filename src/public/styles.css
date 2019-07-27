@@ -106,8 +106,8 @@ button {
 }
 
 .form-container .form-group label[for="avatar"] {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   background: #eee;
   border-radius: 50%;
   align-self: center;
