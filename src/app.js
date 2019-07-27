@@ -7,9 +7,7 @@ const path = require('path')
 class App {
   constructor () {
     this.express = express()
-    this.isDev = process.env.NODE_ENV !== 'Development'
-
-    console.log(process.env.NODE_ENV)
+    this.isDev = process.env.NODE_ENV === 'Development'
 
     this.middlewares()
     this.views()
@@ -27,6 +25,7 @@ class App {
       autoescape: true
     })
 
+    this.express.use(express.static(path.resolve(__dirname, 'public')))
     this.express.set('view engine', 'njk')
   }
 
