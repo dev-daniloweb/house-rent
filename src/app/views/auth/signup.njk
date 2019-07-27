@@ -1,0 +1,35 @@
+{% extends "_layouts/auth.njk" %}
+
+{% block body %}
+  <form action="/signup" method="post" class="form-container">
+    <div class="logo">
+      <img src="https://img.icons8.com/flat_round/64/000000/home.png">
+      <h1>House Rent</h1>
+    </div>
+    <div class="form-group">
+      <label for="avatar">
+        <img src="https://img.icons8.com/cotton/64/000000/gender-neutral-user--v1.png">
+      </label>
+
+      <input type="file" name="avatar" id="avatar">
+
+      <input type="text" placeholder="Nome" >
+      <input type="email" placeholder="Email" >
+      <input type="password" placeholder="Senha" >
+
+      <button type="submit">Cadastrar</button>
+    </div>
+
+    <a href="/">Já possuo conta</a>
+  </form>
+
+  <script type="text/javascript">
+    var avatarInput = document.getElementById('avatar')
+    var img = document.querySelector('label[for=avatar] img')
+
+    avatarInput.onchange = function(e) {
+      img.classList.add('preview')
+      img.src = URL.createObjectURL(e.target.files[0])
+    }
+  </script>
+{% endblock %}

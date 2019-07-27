@@ -1,0 +1,18 @@
+{% extends "_layouts/auth.njk" %}
+
+{% block body %}
+  <form action="" method="post" class="form-container">
+    <div class="logo">
+      <img src="https://img.icons8.com/flat_round/64/000000/home.png">
+      <h1>House Rent</h1>
+    </div>
+    <div class="form-group">
+      <input type="email" placeholder="Email" >
+      <input type="password" placeholder="Senha" >
+
+      <button type="submit">Entrar</button>
+    </div>
+
+    <a href="/signup">Criar Conta</a>
+  </form>
+{% endblock %}
