@@ -1,2 +1,2 @@
 # House Rent
-Sistema de aluguel de imóveis desenvolvido para praticar alguns conhecimentos em NodeJS
+Projeto desenvolvido para praticar alguns conhecimentos em NodeJS
