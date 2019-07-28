@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const { User } = require('../models')
 
 class AuthController {
@@ -22,6 +24,13 @@ class AuthController {
     req.session.user = user
 
     return res.redirect('/dashboard')
+  }
+
+  destroy (req, res) {
+    req.session.destroy(() => {
+      res.clearCookie(process.env.SESSION)
+      res.redirect('/')
+    })
   }
 }
 

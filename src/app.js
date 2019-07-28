@@ -20,7 +20,7 @@ class App {
     this.express.use(express.urlencoded({ extended: false }))
     this.express.use(
       session({
-        name: 'root',
+        name: process.env.SESSION,
         secret: process.env.SECRET_KEY,
         resave: true,
         store: new Store({

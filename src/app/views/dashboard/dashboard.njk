@@ -1,5 +1,6 @@
 {% extends "_layouts/dashboard.njk" %}
 
 {% block body %}
-  <h1>Usuário Logado</h1>
+  <h1>Bem vindo, {{ user.name }}</h1>
+  <a href="/dashboard/logout">Sair</a>
 {% endblock %}

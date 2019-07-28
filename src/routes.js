@@ -21,4 +21,6 @@ routes.get('/dashboard', (req, res) => {
   res.render('dashboard/dashboard')
 })
 
+routes.get('/dashboard/logout', AuthController.destroy)
+
 module.exports = routes
