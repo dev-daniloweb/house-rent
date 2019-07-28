@@ -6,7 +6,7 @@
   "author": "danilo <dev.daniloweb@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon src/index.js",
+    "dev": "nodemon src/index.js -e js",
     "start": "node src/index.js -e js"
   },
   "dependencies": {

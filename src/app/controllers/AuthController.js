@@ -21,7 +21,7 @@ class AuthController {
 
     req.session.user = user
 
-    res.redirect('/dashboard')
+    return res.redirect('/dashboard')
   }
 }
 
