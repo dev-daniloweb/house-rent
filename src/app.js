@@ -1,6 +1,8 @@
 require('dotenv').config()
 
 const express = require('express')
+const session = require('express-session')
+const Store = require('session-file-store')(session)
 const nunjucks = require('nunjucks')
 const path = require('path')
 
@@ -16,6 +18,17 @@ class App {
 
   middlewares () {
     this.express.use(express.urlencoded({ extended: false }))
+    this.express.use(
+      session({
+        name: 'root',
+        secret: process.env.SECRET_KEY,
+        resave: true,
+        store: new Store({
+          path: path.resolve(__dirname, '..', 'tmp', 'sessions')
+        }),
+        saveUninitialized: true
+      })
+    )
   }
 
   views () {

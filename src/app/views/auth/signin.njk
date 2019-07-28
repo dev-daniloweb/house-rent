@@ -1,14 +1,14 @@
 {% extends "_layouts/auth.njk" %}
 
 {% block body %}
-  <form action="" method="post" class="form-container">
+  <form action="/signin" method="post" class="form-container">
     <div class="logo">
       <img src="https://img.icons8.com/flat_round/64/000000/home.png">
       <h1>House Rent</h1>
     </div>
     <div class="form-group">
-      <input type="email" placeholder="Email" >
-      <input type="password" placeholder="Senha" >
+      <input type="email" name="email" placeholder="Email" >
+      <input type="password" name="password" placeholder="Senha" >
 
       <button type="submit">Entrar</button>
     </div>
